@@ -26,9 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nlnv@zh$o87*65m3^n^fekg40@kw+wm=ij4vgba+xeupb3f&oj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "46.62.226.139",
+    "127.0.0.1",
+    "localhost",
+]
+
 
 
 # Application definition
@@ -149,6 +154,7 @@ AUTH_USER_MODEL = 'core.CustomerUser'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
+    "http://46.62.226.139"
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (   
