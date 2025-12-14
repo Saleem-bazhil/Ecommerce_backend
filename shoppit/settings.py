@@ -133,10 +133,20 @@ USE_TZ = True
 # 
 # DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+# Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
+
+# REQUIRED in production
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Optional: for custom static files (like css/custom.css)   
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
 
 
 CLOUDINARY_STORAGE = {
