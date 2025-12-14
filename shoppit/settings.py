@@ -33,7 +33,9 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     "apiecommerce.bazhilgroups.in",
+    "ecommerce.bazhilgroups.in",   
 ]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -164,10 +166,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'core.CustomerUser'
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
+    "http://localhost:5173",
     "http://46.62.226.139",
-    "https://ecommerce-frontend-4ucs.vercel.app"
+    "https://ecommerce-frontend-4ucs.vercel.app",
+    "https://ecommerce.bazhilgroups.in",
 ]
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (   
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -210,8 +214,12 @@ JAZZMIN_SETTINGS = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://apiecommerce.bazhilgroups.in",
+    "https://ecommerce.bazhilgroups.in",
 ]
+
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 USE_X_FORWARDED_HOST = True
 SECURE_SSL_REDIRECT = False
+
+CORS_ALLOW_CREDENTIALS = True
