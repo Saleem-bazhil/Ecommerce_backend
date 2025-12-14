@@ -32,10 +32,8 @@ ALLOWED_HOSTS = [
     "46.62.226.139",
     "127.0.0.1",
     "localhost",
+    "apiecommerce.bazhilgroups.in",
 ]
-
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -155,7 +153,8 @@ AUTH_USER_MODEL = 'core.CustomerUser'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
-    "http://46.62.226.139"
+    "http://46.62.226.139",
+    "https://ecommerce-frontend-4ucs.vercel.app"
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (   
@@ -197,3 +196,6 @@ JAZZMIN_SETTINGS = {
     "related_modal_active": True,
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://apiecommerce.bazhilgroups.in",
+]
