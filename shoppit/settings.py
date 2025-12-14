@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'jazzmin', 
     'import_export',
     'cloudinary',
-    'cloudinary_storage',
+    # 'cloudinary_storage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
